@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "music-app-web": {
+    "agalliao-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/music-app-web",
+            "outputPath": "dist/agalliao-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "music-app-web:build:production"
+              "browserTarget": "agalliao-web:build:production"
             },
             "development": {
-              "browserTarget": "music-app-web:build:development"
+              "browserTarget": "agalliao-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "music-app-web:build"
+            "browserTarget": "agalliao-web:build"
           }
         },
         "test": {
