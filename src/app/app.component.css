@@ -1,0 +1,111 @@
+.media-controls{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1F1F22;
+    padding: 10px;
+}
+
+.media-controls .now-playing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    overflow: hidden;
+}
+
+.media-controls .now-playing .media{
+    margin-right: 5px;
+}
+
+.media-controls .now-playing .media,
+.media-controls .now-playing .media img{
+    height: 50px;
+    width: 50px;
+}
+.media-controls .now-playing .desc{
+    overflow: hidden;
+}
+
+.media-controls .now-playing .desc p{
+    margin: 0;
+    font-family: "Inter-SemiBold";
+    white-space: nowrap;
+}
+
+.media-controls .now-playing .desc .artist{
+    color: #FCFCFC;
+    font-size: 14px;
+}
+
+.media-controls .now-playing .desc .title,
+.media-controls .now-playing .desc .from{
+    color: #FCFCFCA6;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.media-controls .now-playing .desc .title{
+    font-size: 14px;
+}
+
+.media-out{
+    padding: 0 10px;
+}
+
+.media-out span, .media-out i{
+    padding: 10px;
+    color: #FCFCFC;
+    font-size: 16px;
+}
+
+.play-media{
+    width: 500px;;
+}
+
+.play-media .playing-controls{
+    text-align: center;
+}
+
+.play-media .playing-controls span,
+.play-media .playing-controls span  i{
+    padding: 10px;
+    color: #FCFCFC;
+    font-size: 16px;
+}
+
+.playing-indicator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playing-indicator .length, .playing-indicator .length .buffer,
+.playing-indicator .length .buffer .current{
+    height: 4px;
+    border-radius: 8px;
+}
+
+.playing-indicator .length{
+    width: 100%;
+    margin: 0 5px;
+    background-color: #4C4E54;
+}
+
+.playing-indicator .length .buffer{
+    width: 70%;
+    background-color: #95979b;
+}
+
+.playing-indicator .length .buffer .current{
+    width: 66%;
+    background-color: #FCFCFC;
+}
+
+.playing-indicator .time{
+    font-size: 12px;
+    color: #4C4E54;
+}
