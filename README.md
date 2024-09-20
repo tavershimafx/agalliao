@@ -1,4 +1,5 @@
-# MusicAppWeb
+# Agalliao Web
+Agalliao web is the web client for the [agalliao backend](https://github.com/tavershimafx/agalliao) api application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
