@@ -71,10 +71,23 @@
 }
 
 .play-media .playing-controls span,
-.play-media .playing-controls span  i{
+.play-media .playing-controls span i{
     padding: 10px;
     color: #FCFCFC;
     font-size: 16px;
+    text-align: center;
+    align-content: center;
+}
+
+.play-media .playing-controls span i{
+    height: 36px;
+    width: 36px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+}
+
+.play-media .playing-controls span i:hover{
+    border: 1px solid #95979b7e;
 }
 
 .playing-indicator{
@@ -108,4 +121,334 @@
 .playing-indicator .time{
     font-size: 12px;
     color: #4C4E54;
+}
+
+.open-surf{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.open-surf aside{
+    background-color: #212124;
+    height: 100%;
+    width: 300px;
+    padding: 10px 10px 75px 10px;
+    overflow-y: scroll;
+}
+
+.open-surf aside .user-set{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.open-surf aside .user-set .usr{
+    background-color: #95979b;
+    border-radius: 100%;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    color: #FCFCFC;
+}
+
+.open-surf aside .user-set span{
+    color: #FCFCFC;
+    font-size: 16px;
+}
+
+aside .panel{
+    margin-top: 20px;
+}
+
+aside .panel .heading{
+    color: #9898A6;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+aside .panel p:not(.heading){
+    color: #FCFCFC;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+}
+
+aside .panel ul{
+   margin: 0;
+   list-style-type: none;
+   padding-left: 20px;
+}
+
+aside .panel ul li{
+    color: #FCFCFC;
+    font-size: 12px;
+    padding: 8px 0;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+
+aside .panel ul li svg{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+aside .panel ul li:hover,
+aside .panel p:not(.heading):hover{
+    color: #FCFCFCA6;
+    cursor: pointer;
+}
+
+aside .panel p.active, aside .panel p.active:hover{
+    color: #00FFFF;
+}
+
+
+.open-surf .media-surface{
+    background-color: #171719;
+    height: 100%;
+    width: 100%;
+    padding: 20px 30px 75px 30px;
+    overflow-y: scroll;
+}
+
+.media-surface .top-bar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.media-surface .top-bar .search{
+    background-color: #1F1F22;
+    border: 1px solid #EBEBFF31;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.media-surface .top-bar .search span{
+    font-size: 14px;
+    color: #FCFCFC;
+    margin-right: 10px;
+}
+
+.media-surface .top-bar .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #FCFCFC;
+    background-color: transparent;
+    width: 200px;
+}
+
+.album-carousel{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.album-carousel .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-carousel .heading p{
+    margin: 0;
+    font-size: 16px;
+    color: #FCFCFC;
+}
+
+.album-carousel .heading span{
+    padding: 5px 6px;
+    background-color: #1F1F22;
+    border: 1px solid #EBEBFF31;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.album-carousel .heading i{
+    padding: 4px;
+    color: #FCFCFC;
+}
+
+.album-carousel .items{
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 20px;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.album-carousel .items::-webkit-scrollbar{
+    display: none;
+}
+
+.album-carousel .items .item{
+    display: inline-block;
+    height: 280px;
+    width: 200px;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.album-carousel .items div{
+    margin: 0;
+    padding: 0;
+}
+
+.album-carousel .items .cover{
+    margin: 0;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+}
+
+.album-carousel .items .item .morph{
+    position: relative;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.album-carousel .items .item .morph .play{
+    position: absolute;
+    text-align: center;
+    top: -20px;
+    right: 10px;
+}
+
+.album-carousel .items .item .morph .play i{
+    position: relative;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #FCFCFC;
+    border-radius: 100%;
+    color: #171719;
+}
+
+.album-carousel .items .item .morph .title{
+    font-size: 16px;
+    color: #FCFCFC;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-family: 'Inter-SemiBold';
+}
+
+.album-carousel .items .item .morph .artist{
+    font-size: 14px;
+    color: #9898A6;
+    margin: 8px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.songs-carousel{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.songs-carousel .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songs-carousel .heading p{
+    margin: 0;
+    font-size: 16px;
+    color: #FCFCFC;
+}
+
+.songs-carousel .heading span{
+    padding: 5px 6px;
+    background-color: #1F1F22;
+    border: 1px solid #EBEBFF31;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.songs-carousel .heading i{
+    padding: 4px;
+    color: #FCFCFC;
+}
+
+.songs-carousel .items{
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 20px;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.songs-carousel .items::-webkit-scrollbar{
+    display: none;
+}
+
+.songs-carousel .items .item{
+    display: inline-block;
+    height: 280px;
+    width: 200px;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.songs-carousel .items div{
+    margin: 0;
+    padding: 0;
+}
+
+.songs-carousel .items .cover{
+    margin: 0;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+}
+
+.songs-carousel .items .item .desc{
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.songs-carousel .items .item .desc .title{
+    font-size: 16px;
+    color: #FCFCFC;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-family: 'Inter-SemiBold';
+}
+
+.songs-carousel .items .item .desc .artist{
+    font-size: 14px;
+    color: #FCFCFCA6;
+    margin: 8px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songs-carousel .items .item .desc .label{
+    font-size: 10px;
+    color: #FCFCFCA6;
+    margin: 8px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
 }
