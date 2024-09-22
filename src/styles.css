@@ -54,6 +54,9 @@ body, html{
     margin-top: 20px !important;
 }
 
+/*******************************************************************/
+/***************************Animations******************************/
+/*******************************************************************/
 .marquee{
     position: relative;
     left: 0;
@@ -70,6 +73,102 @@ body, html{
     }
 
     to{
-        left: -100%;
+        left: -50%;
     }
 }
+
+@keyframes slide-in{
+    from{
+        transform: translateX(-100%);
+    }
+
+    to{
+        transform: translateX();
+    }
+}
+
+@keyframes slide-out{
+    from{
+        transform: translateX();
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+/*********************************************************************/
+/***************************Mobile phones*****************************/
+/*********************************************************************/
+@media only screen and (max-width: 575.98px) and (orientation:portrait) {
+    /* For portrait layouts only */
+
+    .h-m{
+        display: none;
+    }
+
+    .slide-in-mob{
+        animation-name: slide-in;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .slide-out-mob{
+        animation-name: slide-out;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    
+}
+
+@media only screen and (min-width: 360px) and (max-width: 575.98px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+/* For landscape layouts only */
+}
+
+/*********************************************************************/
+/******************************Tablets********************************/
+/*********************************************************************/
+@media only screen and (min-width: 576px) and (max-width: 991.98px){
+    /*All tablets */
+    
+}
+
+@media only screen and (min-width: 576px) and (orientation:portrait){
+    /*small pablets */
+
+}
+
+@media only screen and (min-width: 768px) {
+    /*specific pablets */
+}
+
+@media only screen and (max-width: 767.98px) {
+    /*specific pablets */
+}
+
+@media only screen and (max-width: 991.98px) {
+    /*specific pablets */
+}
+
+
+/*********************************************************************/
+/***************************Small Laptops*****************************/
+/*********************************************************************/
+@media only screen and (min-width: 992px)and (max-width: 1199.98px) {
+    /* All small laptops*/
+
+}
+
+
+
+/*********************************************************************/
+/**********************Bigger screens/smart TVs***********************/
+/*********************************************************************/
+@media only screen and (min-width: 1200px) {}

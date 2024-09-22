@@ -56,6 +56,10 @@
     padding: 0 10px;
 }
 
+.media-out .m-more{
+    display: none;
+}
+
 .media-out span, .media-out i{
     padding: 10px;
     color: #FCFCFC;
@@ -63,7 +67,12 @@
 }
 
 .play-media{
-    width: 500px;;
+    width: 500px;
+    overflow: hidden;
+}
+
+.play-media .title{
+    display: none;
 }
 
 .play-media .playing-controls{
@@ -224,6 +233,13 @@ aside .panel p.active a{
 .planars .top-bar{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.top-bar .mobile-menu{
+    display: none;
+    font-size: 18px;
+    color: #FCFCFC;
 }
 
 .planars .top-bar .search{
@@ -259,6 +275,61 @@ aside .panel p.active a{
         position: absolute;
         z-index: 10;
         width: 200px;
+    }
+
+    .planars .top-bar{
+        justify-content: space-between;
+    }
+
+    .top-bar .mobile-menu{
+        display: block;
+    }
+
+    .media-controls .now-playing{
+        width: auto;
+    }
+
+    .now-playing .desc{
+        display: none;
+    }
+
+    .media-controls .play-media{
+        width: 250px;
+    }
+
+    .play-media .title{
+        display: block;
+        margin: 0;
+        word-break: keep-all;
+        white-space: nowrap;
+        color: #FCFCFC;
+        font-size: 12px;
+    }
+
+    .play-media .playing-controls span{
+        padding: 0;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    
+    .play-media .playing-controls span i{
+        padding: 0;
+        height: 30px;
+        width: 30px;
+    }
+
+    .media-out {
+        padding: 0;
+    }
+
+    .media-out .m-more{
+        display: block;
+        padding: 5px;
+        transform: rotate(90deg);
+    }
+
+    .media-out .out-ct{
+        position: absolute;
         display: none;
     }
 }

@@ -1,6 +1,6 @@
 <section class="main-body h-100">
   <section class="open-surf">
-    <aside>
+    <aside class="slide-out-mob" #side_bar>
       <div class="user-set">
         <p class="usr">US</p>
         <span><i class="fa fa-ellipsis"></i></span>
@@ -103,6 +103,7 @@
     </aside>
     <div class="planars">
       <div class="top-bar">
+        <span class="mobile-menu" (click)="toggleSideBar()"><i class="fa fa-bars"></i></span>
         <div class="search">
           <span><i class="fa fa-search"></i></span>
           <input type="text" placeholder="search">
@@ -123,6 +124,9 @@
       </div>
     </div>
     <div class="play-media">
+      <p class="title marquee">
+        Theophilus Sunday &#x2022; Now that we are married
+      </p>
       <div class="playing-controls">
         <span><i class="fa fa-repeat"></i></span>
         <span><i class="fa fa-backward-step"></i></span>
@@ -141,10 +145,13 @@
       </div>
     </div>
     <div class="media-out">
-      <span><i class="fa fa-volume-high"></i></span>
-      <span><i class="fa-brands fa-chromecast"></i></span>
-      <span><i class="fa fa-bars"></i></span>
-      <span class="up"><i class="fa fa-chevron-up"></i></span>
+      <span class="m-more"><i class="fa fa-ellipsis"></i></span>
+      <div class="out-ct">
+        <span><i class="fa fa-volume-high"></i></span>
+        <span><i class="fa-brands fa-chromecast"></i></span>
+        <span><i class="fa fa-bars"></i></span>
+        <span class="up"><i class="fa fa-chevron-up"></i></span>
+      </div>
     </div>
   </section>
 </section>
