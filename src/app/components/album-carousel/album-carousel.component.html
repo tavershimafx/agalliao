@@ -1,0 +1,12 @@
+<div class="album-carousel">
+  <div class="heading">
+    <p>{{resource?.name}}</p>
+    <div>
+      <span (click)="scrPrev()"><i class="fa fa-chevron-left"></i></span>
+      <span (click)="scrNext()"><i class="fa fa-chevron-right"></i></span>
+    </div>
+  </div>
+  <div class="items" #itemsContain>
+    <album *ngFor="let album of resource?.items" [album]="album"></album>
+  </div>
+</div>

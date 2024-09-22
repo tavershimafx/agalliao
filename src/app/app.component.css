@@ -170,11 +170,12 @@ aside .panel .heading{
     padding: 0;
 }
 
-aside .panel p:not(.heading){
+aside .panel p:not(.heading) a{
     color: #FCFCFC;
     font-size: 14px;
     margin: 0;
     padding: 10px;
+    text-decoration: none;
 }
 
 aside .panel ul{
@@ -184,11 +185,15 @@ aside .panel ul{
 }
 
 aside .panel ul li{
+    padding: 8px 0;
+}
+
+aside .panel ul li a{
     color: #FCFCFC;
     font-size: 12px;
-    padding: 8px 0;
     word-break: break-all;
     text-overflow: ellipsis;
+    text-decoration: none;
 }
 
 aside .panel ul li svg{
@@ -198,18 +203,17 @@ aside .panel ul li svg{
     margin-right: 10px;
 }
 
-aside .panel ul li:hover,
+aside .panel ul li a:hover,
 aside .panel p:not(.heading):hover{
     color: #FCFCFCA6;
     cursor: pointer;
 }
 
-aside .panel p.active, aside .panel p.active:hover{
+aside .panel p.active a{
     color: #00FFFF;
 }
 
-
-.open-surf .media-surface{
+.open-surf .planars{
     background-color: #171719;
     height: 100%;
     width: 100%;
@@ -217,25 +221,25 @@ aside .panel p.active, aside .panel p.active:hover{
     overflow-y: scroll;
 }
 
-.media-surface .top-bar{
+.planars .top-bar{
     display: flex;
     justify-content: flex-end;
 }
 
-.media-surface .top-bar .search{
+.planars .top-bar .search{
     background-color: #1F1F22;
     border: 1px solid #EBEBFF31;
     border-radius: 12px;
-    padding: 10px;
+    padding: 6px 10px;
 }
 
-.media-surface .top-bar .search span{
+.planars .top-bar .search span{
     font-size: 14px;
     color: #FCFCFC;
     margin-right: 10px;
 }
 
-.media-surface .top-bar .search input{
+.planars .top-bar .search input{
     border: none;
     outline: none;
     font-size: 14px;
@@ -244,211 +248,66 @@ aside .panel p.active, aside .panel p.active:hover{
     width: 200px;
 }
 
-.album-carousel{
-    width: 100%;
-    margin-top: 25px;
+
+
+/*********************************************************************/
+/***************************Mobile phones*****************************/
+/*********************************************************************/
+@media only screen and (max-width: 575.98px) and (orientation:portrait) {
+/* For portrait layouts only */
+    .open-surf aside{
+        position: absolute;
+        z-index: 10;
+        width: 200px;
+        display: none;
+    }
 }
 
-.album-carousel .heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media only screen and (min-width: 360px) and (max-width: 575.98px) and (orientation:portrait) {
+    /* For portrait layouts only */
 }
 
-.album-carousel .heading p{
-    margin: 0;
-    font-size: 16px;
-    color: #FCFCFC;
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+/* For landscape layouts only */
 }
 
-.album-carousel .heading span{
-    padding: 5px 6px;
-    background-color: #1F1F22;
-    border: 1px solid #EBEBFF31;
-    border-radius: 100%;
-    margin-right: 5px;
+/*********************************************************************/
+/******************************Tablets********************************/
+/*********************************************************************/
+@media only screen and (min-width: 576px) and (max-width: 991.98px){
+    /*All tablets */
+
 }
 
-.album-carousel .heading i{
-    padding: 4px;
-    color: #FCFCFC;
+@media only screen and (min-width: 576px) and (orientation:portrait){
+    /*small pablets */
+
 }
 
-.album-carousel .items{
-    width: 100%;
-    overflow-x: scroll;
-    margin-top: 20px;
-    white-space: nowrap;
-    scrollbar-width: none;
+@media only screen and (min-width: 768px) {
+    /*specific pablets */
 }
 
-.album-carousel .items::-webkit-scrollbar{
-    display: none;
+@media only screen and (max-width: 767.98px) {
+    /*specific pablets */
 }
 
-.album-carousel .items .item{
-    display: inline-block;
-    height: 280px;
-    width: 200px;
-    border-radius: 12px;
-    margin-right: 10px;
-    padding: 0;
-    overflow: hidden;
+@media only screen and (max-width: 991.98px) {
+    /*specific pablets */
 }
 
-.album-carousel .items div{
-    margin: 0;
-    padding: 0;
-}
 
-.album-carousel .items .cover{
-    margin: 0;
-    width: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 200px;
-}
+/*********************************************************************/
+/***************************Small Laptops*****************************/
+/*********************************************************************/
+@media only screen and (min-width: 992px)and (max-width: 1199.98px) {
+    /* All small laptops*/
 
-.album-carousel .items .item .morph{
-    position: relative;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-    background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(5px);
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0 10px;
-}
-
-.album-carousel .items .item .morph .play{
-    position: absolute;
-    text-align: center;
-    top: -20px;
-    right: 10px;
-}
-
-.album-carousel .items .item .morph .play i{
-    position: relative;
-    padding: 10px 12px;
-    font-size: 14px;
-    background-color: #FCFCFC;
-    border-radius: 100%;
-    color: #171719;
-}
-
-.album-carousel .items .item .morph .title{
-    font-size: 16px;
-    color: #FCFCFC;
-    margin: 0;
-    padding: 10px 0 0 0;
-    font-family: 'Inter-SemiBold';
-}
-
-.album-carousel .items .item .morph .artist{
-    font-size: 14px;
-    color: #9898A6;
-    margin: 8px 0 0 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 
 
-
-.songs-carousel{
-    width: 100%;
-    margin-top: 25px;
-}
-
-.songs-carousel .heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.songs-carousel .heading p{
-    margin: 0;
-    font-size: 16px;
-    color: #FCFCFC;
-}
-
-.songs-carousel .heading span{
-    padding: 5px 6px;
-    background-color: #1F1F22;
-    border: 1px solid #EBEBFF31;
-    border-radius: 100%;
-    margin-right: 5px;
-}
-
-.songs-carousel .heading i{
-    padding: 4px;
-    color: #FCFCFC;
-}
-
-.songs-carousel .items{
-    width: 100%;
-    overflow-x: scroll;
-    margin-top: 20px;
-    white-space: nowrap;
-    scrollbar-width: none;
-}
-
-.songs-carousel .items::-webkit-scrollbar{
-    display: none;
-}
-
-.songs-carousel .items .item{
-    display: inline-block;
-    height: 280px;
-    width: 200px;
-    margin-right: 10px;
-    padding: 0;
-    overflow: hidden;
-}
-
-.songs-carousel .items div{
-    margin: 0;
-    padding: 0;
-}
-
-.songs-carousel .items .cover{
-    margin: 0;
-    width: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 200px;
-}
-
-.songs-carousel .items .item .desc{
-    position: relative;
-    width: 100%;
-    margin: 0;
-}
-
-.songs-carousel .items .item .desc .title{
-    font-size: 16px;
-    color: #FCFCFC;
-    margin: 0;
-    padding: 10px 0 0 0;
-    font-family: 'Inter-SemiBold';
-}
-
-.songs-carousel .items .item .desc .artist{
-    font-size: 14px;
-    color: #FCFCFCA6;
-    margin: 8px 0 0 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.songs-carousel .items .item .desc .label{
-    font-size: 10px;
-    color: #FCFCFCA6;
-    margin: 8px 0 0 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-}
+/*********************************************************************/
+/**********************Bigger screens/smart TVs***********************/
+/*********************************************************************/
+@media only screen and (min-width: 1200px) {}

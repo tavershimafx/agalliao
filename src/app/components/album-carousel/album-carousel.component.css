@@ -1,0 +1,41 @@
+.album-carousel{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.album-carousel .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-carousel .heading p{
+    margin: 0;
+    font-size: 16px;
+    color: #FCFCFC;
+}
+
+.album-carousel .heading span{
+    padding: 5px 6px;
+    background-color: #1F1F22;
+    border: 1px solid #EBEBFF31;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.album-carousel .heading i{
+    padding: 4px;
+    color: #FCFCFC;
+}
+
+.album-carousel .items{
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 20px;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.album-carousel .items::-webkit-scrollbar{
+    display: none;
+}

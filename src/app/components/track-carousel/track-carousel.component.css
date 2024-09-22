@@ -1,0 +1,42 @@
+
+.songs-carousel{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.songs-carousel .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songs-carousel .heading p{
+    margin: 0;
+    font-size: 16px;
+    color: #FCFCFC;
+}
+
+.songs-carousel .heading span{
+    padding: 5px 6px;
+    background-color: #1F1F22;
+    border: 1px solid #EBEBFF31;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.songs-carousel .heading i{
+    padding: 4px;
+    color: #FCFCFC;
+}
+
+.songs-carousel .items{
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 20px;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.songs-carousel .items::-webkit-scrollbar{
+    display: none;
+}
