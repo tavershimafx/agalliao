@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ModalDialogComponent {
   @Input("size") size: string = "md"
+  @Input("bg") bg: boolean = false
 }
