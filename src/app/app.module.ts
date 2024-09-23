@@ -11,6 +11,8 @@ import { AlbumComponent } from './components/album/album.component';
 import { AlbumCarouselComponent } from './components/album-carousel/album-carousel.component';
 import { TrackCarouselComponent } from './components/track-carousel/track-carousel.component';
 import { CommonModule } from '@angular/common';
+import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CommonModule } from '@angular/common';
     TrackComponent,
     AlbumComponent,
     AlbumCarouselComponent,
-    TrackCarouselComponent
+    TrackCarouselComponent,
+    ModalDialogComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

@@ -45,3 +45,15 @@
     text-overflow: ellipsis;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 575.98px) and (orientation:portrait) {
+    .item{
+        height: 220px;
+        width: 130px;
+    }
+    
+    .item .cover{
+        width: 130px;
+        height: 130px;
+    }
+}

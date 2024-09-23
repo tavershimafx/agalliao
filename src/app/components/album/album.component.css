@@ -62,3 +62,24 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media only screen and (max-width: 575.98px) and (orientation:portrait) {
+    .item{
+        height: 220px;
+        width: 130px;
+    }
+    
+    .item .cover{
+        width: 130px;
+        height: 130px;
+    }
+
+    .item .morph .play{
+        top: -15px;
+    }
+
+    .item .morph .play i{
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+}
