@@ -26,6 +26,50 @@
     font-size: 14px;
 }
 
+.track-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.track-controls .artist{
+    position: relative;
+    align-content: center;
+}
+
+.track-controls .artist *{
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    color: #FCFCFC;
+}
+
+.track-controls .artist img{
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.track-controls .play{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    text-align: center;
+    align-content: center;
+    border: 1px solid #FCFCFC;
+    border-radius: 100%;
+}
+
+.track-controls .play i{
+    color: #FCFCFC;
+    font-size: 14px;
+}
+
 table, tr, thead, tbody{
     border-collapse: collapse;
     border: none;
