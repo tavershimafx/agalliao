@@ -13,6 +13,7 @@ import { TrackCarouselComponent } from './components/track-carousel/track-carous
 import { CommonModule } from '@angular/common';
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { SwipeDirective } from './components/directives/swipe.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { DialogComponent } from './components/dialog/dialog.component';
     AlbumCarouselComponent,
     TrackCarouselComponent,
     ModalDialogComponent,
-    DialogComponent
+    DialogComponent,
+
+    // directives
+    SwipeDirective
   ],
   imports: [
     BrowserModule,

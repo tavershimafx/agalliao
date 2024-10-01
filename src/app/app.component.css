@@ -144,6 +144,8 @@
     width: 300px;
     padding: 10px 10px 75px 10px;
     overflow-y: scroll;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .open-surf aside .user-set{

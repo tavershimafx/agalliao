@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TrackSection } from 'src/app/models/container';
 
 @Component({
@@ -10,6 +11,12 @@ export class AlbumCarouselComponent implements OnInit  {
   
   @Input() resource?: TrackSection
   @ViewChild("itemsContain", { static: true }) itemsContain!: ElementRef
+
+  //swipeSubsciption?: Subscription
+
+  constructor(){
+
+  }
 
   ngOnInit(): void {
     
@@ -24,4 +31,6 @@ export class AlbumCarouselComponent implements OnInit  {
     let l = this.itemsContain.nativeElement.scrollLeft
     this.itemsContain.nativeElement.scroll({ top: 0, left: l + 200, behavior: 'smooth'})
   }
+
+ 
 }

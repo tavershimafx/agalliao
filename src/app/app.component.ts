@@ -9,6 +9,7 @@ import isInbound from './utils/element';
 export class AppComponent {
   
   @ViewChild("side_bar", { static: true }) sideBar!: ElementRef
+  @ViewChild("demain", { static: true }) demain!: ElementRef
   constructor(){
     this.clickOut = this.clickOut.bind(this)
   }
@@ -19,7 +20,7 @@ export class AppComponent {
     if (!b){
       this.sideBar.nativeElement.classList.remove("slide-in-mob")
       this.sideBar.nativeElement.classList.add("slide-out-mob")
-      document.removeEventListener("click", this.clickOut)
+      this.demain.nativeElement.removeEventListener("click", this.clickOut)
     }
   }
 
@@ -28,7 +29,7 @@ export class AppComponent {
       this.sideBar.nativeElement.classList.remove("slide-out-mob")
       this.sideBar.nativeElement.classList.add("slide-in-mob")
       setTimeout(() => {
-        document.addEventListener("click", this.clickOut)
+        this.demain.nativeElement.addEventListener("click", this.clickOut)
       }, 200);
     }else{
       this.sideBar.nativeElement.classList.remove("slide-in-mob")
